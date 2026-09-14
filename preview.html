@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo FUND Preview</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #0B0E14;
+      color: #EAEEF6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #D4AF37;
+    }
+
+    .preview-card {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .dark-bg {
+      background: radial-gradient(circle at center, #1A1F2C 0%, #0D1017 100%);
+    }
+
+    .light-bg {
+      background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 24px;
+      opacity: 0.7;
+    }
+
+    .light-bg .card-title {
+      color: #333;
+    }
+
+    .svg-container {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon-grid {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-box {
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FUND LOGO DESIGN</h1>
+
+  <!-- Full Logo on Dark Background -->
+  <div class="preview-card dark-bg">
+    <div class="card-title">Full Logo - Dark Theme</div>
+    <div class="svg-container">
+      <img src="logo.svg" alt="FUND Logo" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <!-- Full Logo on Light Background -->
+  <div class="preview-card light-bg">
+    <div class="card-title">Full Logo - Light Theme</div>
+    <div class="svg-container">
+      <img src="logo.svg" alt="FUND Logo" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <!-- Standalone Shield Icon -->
+  <div class="preview-card dark-bg">
+    <div class="card-title">Icon Mark (Shield with H)</div>
+    <div class="icon-grid">
+      <div class="icon-box">
+        <img src="logo-icon.svg" alt="FUND Shield Icon" style="width: 120px; height: 120px;">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
