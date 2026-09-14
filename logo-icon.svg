@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Gold Gradients -->
+    <linearGradient id="goldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE58F" />
+      <stop offset="30%" stop-color="#E6B800" />
+      <stop offset="55%" stop-color="#FFF1B8" />
+      <stop offset="80%" stop-color="#B38600" />
+      <stop offset="100%" stop-color="#664D00" />
+    </linearGradient>
+
+    <linearGradient id="goldInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2415" />
+      <stop offset="50%" stop-color="#141008" />
+      <stop offset="100%" stop-color="#050402" />
+    </linearGradient>
+
+    <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5CC" />
+      <stop offset="35%" stop-color="#FFD700" />
+      <stop offset="70%" stop-color="#CCA300" />
+      <stop offset="100%" stop-color="#FFF2A3" />
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Glow -->
+  <circle cx="256" cy="256" r="230" fill="url(#glow)" />
+
+  <!-- Main Shield Group -->
+  <g filter="url(#dropShadow)">
+    <!-- Outer Metallic Gold Shield Border -->
+    <path d="M 256,40
+             C 340,40 410,65 436,100
+             C 436,250 370,390 256,468
+             C 142,390 76,250 76,100
+             C 102,65 172,40 256,40 Z"
+          fill="url(#goldOuter)" />
+
+    <!-- Inner Dark Shield Body -->
+    <path d="M 256,58
+             C 330,58 392,80 416,112
+             C 416,242 355,366 256,442
+             C 157,366 96,242 96,112
+             C 120,80 182,58 256,58 Z"
+          fill="url(#goldInner)"
+          stroke="url(#goldOuter)"
+          stroke-width="3" />
+
+    <!-- Inner Gold Bezel Rim -->
+    <path d="M 256,76
+             C 320,76 374,95 394,122
+             C 394,232 340,344 256,414
+             C 172,344 118,232 118,122
+             C 138,95 192,76 256,76 Z"
+          fill="none"
+          stroke="url(#goldH)"
+          stroke-width="2"
+          opacity="0.5" />
+
+    <!-- Stylized 'H' Emblem Inside Shield -->
+    <g transform="translate(0, 0)">
+      <!-- Left Stem of H -->
+      <path d="M 175,150 L 212,150 C 215,150 217,152 217,155 L 217,355 C 217,358 215,360 212,360 L 175,360 C 172,360 170,358 170,355 L 170,155 C 170,152 172,150 175,150 Z"
+            fill="url(#goldH)" />
+
+      <!-- Right Stem of H -->
+      <path d="M 300,150 L 337,150 C 340,150 342,152 342,155 L 342,355 C 342,358 340,360 337,360 L 300,360 C 297,360 295,358 295,355 L 295,155 C 295,152 297,150 300,150 Z"
+            fill="url(#goldH)" />
+
+      <!-- Horizontal Crossbar & Central Diamond Motif -->
+      <path d="M 217,235 L 295,235 L 295,275 L 217,275 Z"
+            fill="url(#goldH)" />
+
+      <!-- Diamond Accent in Center of H -->
+      <polygon points="256,220 276,255 256,290 236,255" fill="url(#goldOuter)" stroke="#141008" stroke-width="2" />
+    </g>
+  </g>
+</svg>

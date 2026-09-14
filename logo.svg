@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400">
+  <defs>
+    <!-- Gold Metallic Gradients -->
+    <linearGradient id="goldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE58F" />
+      <stop offset="30%" stop-color="#E6B800" />
+      <stop offset="55%" stop-color="#FFF1B8" />
+      <stop offset="80%" stop-color="#B38600" />
+      <stop offset="100%" stop-color="#664D00" />
+    </linearGradient>
+
+    <linearGradient id="goldInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A2415" />
+      <stop offset="50%" stop-color="#141008" />
+      <stop offset="100%" stop-color="#050402" />
+    </linearGradient>
+
+    <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5CC" />
+      <stop offset="35%" stop-color="#FFD700" />
+      <stop offset="70%" stop-color="#CCA300" />
+      <stop offset="100%" stop-color="#FFF2A3" />
+    </linearGradient>
+
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8DC" />
+      <stop offset="25%" stop-color="#FFE066" />
+      <stop offset="50%" stop-color="#DAA520" />
+      <stop offset="75%" stop-color="#F0E68C" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+
+    <radialGradient id="glow" cx="20%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Soft Glow behind Shield -->
+  <circle cx="210" cy="200" r="180" fill="url(#glow)" />
+
+  <!-- LEFT SIDE: SHIELD WITH 'H' INSIDE -->
+  <g transform="translate(10, 0)" filter="url(#dropShadow)">
+    <!-- Outer Metallic Gold Shield Border -->
+    <path d="M 200,40
+             C 270,40 328,60 350,90
+             C 350,215 295,330 200,395
+             C 105,330 50,215 50,90
+             C 72,60 130,40 200,40 Z"
+          fill="url(#goldOuter)" />
+
+    <!-- Inner Dark Shield Body -->
+    <path d="M 200,55
+             C 262,55 313,73 333,100
+             C 333,208 282,310 200,373
+             C 118,310 67,208 67,100
+             C 87,73 138,55 200,55 Z"
+          fill="url(#goldInner)"
+          stroke="url(#goldOuter)"
+          stroke-width="2.5" />
+
+    <!-- Inner Gold Bezel Rim -->
+    <path d="M 200,70
+             C 253,70 298,85 315,108
+             C 315,200 270,292 200,350
+             C 130,292 85,200 85,108
+             C 102,85 147,70 200,70 Z"
+          fill="none"
+          stroke="url(#goldH)"
+          stroke-width="1.5"
+          opacity="0.5" />
+
+    <!-- Stylized 'H' Emblem Inside Shield -->
+    <g transform="translate(0, 0)">
+      <!-- Left Stem of H -->
+      <path d="M 132,132 L 163,132 C 165,132 167,134 167,136 L 167,300 C 167,302 165,304 163,304 L 132,304 C 130,304 128,302 128,300 L 128,136 C 128,134 130,132 132,132 Z"
+            fill="url(#goldH)" />
+
+      <!-- Right Stem of H -->
+      <path d="M 237,132 L 268,132 C 270,132 272,134 272,136 L 272,300 C 272,302 270,304 268,304 L 237,304 C 235,304 233,302 233,300 L 233,136 C 233,134 235,132 237,132 Z"
+            fill="url(#goldH)" />
+
+      <!-- Horizontal Crossbar -->
+      <path d="M 167,203 L 233,203 L 233,235 L 167,235 Z"
+            fill="url(#goldH)" />
+
+      <!-- Central Diamond Accent -->
+      <polygon points="200,190 216,219 200,248 184,219" fill="url(#goldOuter)" stroke="#141008" stroke-width="1.5" />
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE: "FUND" TEXT ON THE SIDE -->
+  <g filter="url(#dropShadow)">
+    <text x="430" y="248"
+          font-family="'Montserrat', 'Cinzel', 'Trajan Pro', 'Helvetica Neue', 'Arial', sans-serif"
+          font-size="142"
+          font-weight="900"
+          letter-spacing="14"
+          fill="url(#goldText)">FUND</text>
+  </g>
+</svg>
